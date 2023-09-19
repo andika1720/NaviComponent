@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.challange3.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_framentKedua"
+            app:destination="@id/framentKedua" />
+    </fragment>
+    <fragment
+        android:id="@+id/framentKedua"
+        android:name="com.example.challange3.FramentKedua"
+        android:label="fragment_frament_kedua"
+        tools:layout="@layout/fragment_frament_kedua" >
+        <action
+            android:id="@+id/action_framentKedua_to_fragmentKetiga"
+            app:destination="@id/fragmentKetiga" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKetiga"
+        android:name="com.example.challange3.FragmentKetiga"
+        android:label="fragment_ketiga"
+        tools:layout="@layout/fragment_ketiga" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="Namanya Kosong" />
+    </fragment>
+</navigation>
